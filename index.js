@@ -13,6 +13,7 @@ const authentication = (config) => {
     callbackURL: `${addSlash(cfg_base_url)}auth/callback/oauth2`,
     authorizationURL: config.authorizationURL || "noauthurl",
     tokenURL: config.tokenURL || "notokenurl",
+    state: true,
   };
   const strategy = new OAuth2Strategy(params, function (
     token,
